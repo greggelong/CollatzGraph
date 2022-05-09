@@ -21,17 +21,17 @@ function draw() {
   background(220);
   
   for(let i =0; i<cvertices.length;i++){
-    //for(let j =0; j<cvertices.length;j++){
-     // if (i!=j){
-     // cvertices[i].makeEdge(cvertices[j])
-     // }
-    //}
+    stroke(0);
+    strokeWeight(1);
+    cvertices[i].makeEdge(); // make edges for all vertices 
     cvertices[i].show();
     cvertices[i].move();
-    cvertices[i].touch(mouseX,mouseY);
-    
-    
-    
+    if(cvertices[i].touch(mouseX,mouseY)== true ){
+      // if the mouse is touching a vertex change stroke weight and color and call make edge on it
+        strokeWeight(3)
+        stroke(255,0,0)
+        cvertices[i].makeEdge();
+    } 
   }
   //noLoop()
 }

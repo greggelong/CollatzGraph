@@ -17,7 +17,7 @@ class Cvertex {
   show() {
     
     if(this.neighbors.length>2){
-    fill(255,0,0)
+    fill(255,255,0)
     }else{
       fill(255)
     }
@@ -28,10 +28,16 @@ class Cvertex {
     text(this.roomnum,this.x,this.y)
   }
   
-  makeEdge(testVertex){
+  makeEdge(){
+
+    for(let j =0; j<cvertices.length;j++){
+      //if (this.roomnum!=cvertices[j].roomnum){
+        if(this.neighbors.includes(cvertices[j].roomnum)){
+          line(cvertices[j].x,cvertices[j].y,this.x,this.y)
+       }
+     //}
       
-    if(this.neighbors.includes(testVertex.roomnum)){
-      line(testVertex.x,testVertex.y,this.x,this.y)
+    
       //print(testVertex.roomnum,testVertex.neighbors,this.roomnum, this.neighbors)
     }
   }
@@ -39,6 +45,8 @@ class Cvertex {
   touch(mx,my){
     if(dist(mx,my,this.x,this.y)<this.diameter/2){
       console.log("you got me")
+      return true
     }
+    else false
   }
 }

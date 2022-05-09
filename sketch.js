@@ -2,7 +2,7 @@
 let cvertices = [];
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
   textAlign(CENTER,CENTER)
   
   // make vertexes and add them to array

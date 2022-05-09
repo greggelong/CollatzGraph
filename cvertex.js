@@ -35,4 +35,10 @@ class Cvertex {
       //print(testVertex.roomnum,testVertex.neighbors,this.roomnum, this.neighbors)
     }
   }
+
+  touch(mx,my){
+    if(mx,my,this.x,this.y){
+      console.log("you got me")
+    }
+  }
 }

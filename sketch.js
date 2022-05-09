@@ -21,13 +21,14 @@ function draw() {
   background(220);
   
   for(let i =0; i<cvertices.length;i++){
-    for(let j =0; j<cvertices.length;j++){
-      if (i!=j){
-      cvertices[i].makeEdge(cvertices[j])
-      }
-    }
+    //for(let j =0; j<cvertices.length;j++){
+     // if (i!=j){
+     // cvertices[i].makeEdge(cvertices[j])
+     // }
+    //}
     cvertices[i].show();
     cvertices[i].move();
+    cvertices[i].touch(mouseX,mouseY);
     
     
     

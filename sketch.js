@@ -8,7 +8,7 @@ function setup() {
   // make vertexes and add them to array
   for(let i =0; i<64; i++){
     let neighb = collatzNeighbors(i);
-    print(i,neighb)
+    //print(i,neighb)
     cvertices.push(new Cvertex(i,neighb))
     
   }

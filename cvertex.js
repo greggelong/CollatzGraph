@@ -37,7 +37,7 @@ class Cvertex {
   }
 
   touch(mx,my){
-    if(mx,my,this.x,this.y){
+    if(dist(mx,my,this.x,this.y)<this.diameter/2){
       console.log("you got me")
     }
   }
